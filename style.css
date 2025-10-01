@@ -1,0 +1,126 @@
+@font-face {
+    font-family: source;
+    src: url("source-sans-pro.otf");
+}
+* {
+    margin:5;
+    font-family: source;
+    user-select: none;
+}
+body {
+    display:flex;
+    flex-direction: row;
+}
+#bg {
+    aspect-ratio: 1 / 10;
+    position: relative;
+    margin-left:10px;
+    height:50vh;
+    background:linear-gradient(#00c800 0 3%,#c8c8c8 0 50%,#000000);
+    overflow:hidden;
+}
+#qte{
+    display:none;
+}
+#bar {
+    height:1vh;
+    background-color: red;
+    position:relative;
+    top:98%;
+    display:none;
+}
+#gray-bg{
+    z-index: 10;
+    background-color:rgba(0, 0, 0, 0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    cursor:grabbing;
+}
+#big-label{
+    z-index: 11;
+    color:red;
+    position:absolute;
+    text-align: center;
+    width:100%;
+    font-size: 4em;
+}
+#progressbar { 
+    z-index: 12;
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:80%;
+    transform: translate(-50%,-50%);
+    border:white solid;
+    background-color: rgb(0, 0, 0);
+    border-radius: 13px;
+    padding: 3px;
+}
+
+#progressbar>div {
+    background-color: rgb(0, 255, 0);
+    width: 0%;
+    height: 20px;
+    border-radius: 10px;
+}
+#inventory {
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    border:solid;
+    max-width: 50vh;
+    overflow-y: auto;
+    height:50vh;
+    box-sizing: border-box;
+    grid-auto-rows: min-content;
+}
+
+.item {
+    word-break: break-all;
+    margin:5px;
+    font-size: 0.8em;
+    width: calc((50vh - (10 * 10px)) / 5);
+    aspect-ratio: 1 / 1;
+    border: solid 3px;
+    text-align: center;
+}
+.active {
+    border:solid gold 3px;
+}
+.common {
+    color:rgb(36, 36, 36);
+}
+.rare { 
+    color:cornflowerblue;
+}
+.epic {
+    color:purple
+}
+.legendary {
+    color:gold
+}
+.secret{
+		animation: rainbow 2.5s linear;
+		animation-iteration-count: infinite;
+}
+@keyframes rainbow{0%,100%{color:red}8%{color:#ff7f00}16%{color:#ff0}25%{color:#7fff00}33%{color:#0f0}41%{color:#00ff7f}50%{color:#0ff}58%{color:#007fff}66%{color:#00f}75%{color:#7f00ff}83%{color:#f0f}91%{color:#ff007f}}
+#info{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100vw;
+    height:5vh;
+    background-color: #007fff;
+    align-content: center;
+    padding:0px;
+    margin:auto;
+}
+#info > *{
+    margin: 10px;
+}
+.favorite {
+    border-color: #ff007f;
+}
