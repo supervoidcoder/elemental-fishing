@@ -71,9 +71,9 @@ body {
     display: grid;
     grid-template-columns:repeat(5, 1fr);
     border:solid;
-    max-width: 50vh;
+	width:600px
     overflow-y: auto;
-    height:50vh;
+    height:600px;
     box-sizing: border-box;
     grid-auto-rows: min-content;
 }
@@ -82,7 +82,8 @@ body {
     word-break: break-all;
     margin:5px;
     font-size: 0.8em;
-    width: calc((50vh - (10 * 10px)) / 5);
+    width: 100px;
+	heigh:100px;
     aspect-ratio: 1 / 1;
     border: solid 3px;
     text-align: center;
@@ -123,4 +124,5 @@ body {
 }
 .favorite {
     border-color: #ff007f;
+
 }
