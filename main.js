@@ -56,11 +56,12 @@ let inventory = []
 function finish() {
 	let result = document.getElementById('result')
 	quality = 100 - y
-	if (quality <= 10) result.textContent = "super bad"
+	if (quality <= 0) result.textContent = "you actually suck SKILL ISSUE"
+	else if (quality <= 10) result.textContent = "super bad"
 	else if (quality <= 25) result.textContent = "bad"
 	else if (quality <= 75) result.textContent = "good"
 	else if (quality <= 95) result.textContent = "almost"
-	else result.textContent = "perfect"
+	else result.textContent = "Perfect!"
 	document.addEventListener('mousemove', qte);
 	document.getElementById('qte').style.display = "block";
 }
