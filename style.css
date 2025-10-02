@@ -115,9 +115,9 @@ body {
     display: grid !important;
     grid-template-columns:repeat(4, 1fr);
     border:solid;
-    max-width: 50vh;
+	width:600px
     overflow-y: auto;
-    height:50vh;
+    height:600px;
     box-sizing: border-box;
     grid-auto-rows: max-content;
     flex-grow: inherit;
